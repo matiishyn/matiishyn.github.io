@@ -28,38 +28,21 @@ sdfsf
 ```
 
 
-```ruby
-
-def print_hi(name)
-
-  puts "Hi, #{name}"
-
-end
-
-print_hi('Tom')
-
-#=> prints 'Hi, Tom' to STDOUT.
-
-```
 
 
 
-{% prism javascript %}
+<pre class=' line-numbers'><code class="language-javascript">
 // comment
 import React from 'react';
+ 
+</code></pre>
+
+
+<pre  data-line='1-3'><code class="language-javascript">
 // comment
 import React from 'react';
-// comment
-import React from 'react';
-// comment
-import React from 'react';
-// comment
-import React from 'react';
-// comment
-import React from 'react';
-// comment
-import React from 'react';
-{% endprism %}
+ 
+</code></pre>
 
 
 
