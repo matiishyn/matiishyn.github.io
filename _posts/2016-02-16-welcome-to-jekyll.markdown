@@ -23,6 +23,46 @@ echo 'Hello world!';
 
 {% endhighlight %}
 
+```ruby
+sdfsf
+```
+
+
+```ruby
+
+def print_hi(name)
+
+  puts "Hi, #{name}"
+
+end
+
+print_hi('Tom')
+
+#=> prints 'Hi, Tom' to STDOUT.
+
+```
+
+
+
+{% prism javascript %}
+// comment
+import React from 'react';
+// comment
+import React from 'react';
+// comment
+import React from 'react';
+// comment
+import React from 'react';
+// comment
+import React from 'react';
+// comment
+import React from 'react';
+// comment
+import React from 'react';
+{% endprism %}
+
+
+
 ```javascript
 // comment
 import React from 'react';

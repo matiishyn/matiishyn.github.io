@@ -17,12 +17,9 @@ url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
 
-highlighter: rouge
+#highlighter: rouge
 
 # Build settings
-markdown: kramdown
+#markdown: kramdown
 
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
-  line_numbers: true
+gems: [mm-jekyll-prism]
