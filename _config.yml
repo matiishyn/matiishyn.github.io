@@ -22,11 +22,7 @@ highlighter: rouge
 # Build settings
 markdown: kramdown
 
-
-# Conversion
-markdown:    kramdown
-highlighter: rouge
-lsi:         false
-excerpt_separator: "\n\n"
-incremental: false
-line_numbers: true
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  line_numbers: true
