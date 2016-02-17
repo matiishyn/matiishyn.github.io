@@ -1,65 +1,32 @@
 ---
 layout: post
 title:  "First post"
-date:   2016-02-17 12:03:48 +0100
-categories: jekyll update
+date:   2016-02-17 11:03:48 +0100
+categories: personal
 ---
+Hi there!
 
-test
+Yet another attempt of mine to create my own blog. Why? It's cool, isn't it? Every experienced developer has it, don't they? 
+Well, maybe, but not for my case.
 
-You’ll findrrrr this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+First of all I was looking for a place to save and share some information. And I hope it's the right place to do it. What kind of info?
+Originally this blog is created to share my professional knowledge but it may be the place to share my posts-from-life as well.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+### Who am I?
+My name is Ivan Matiishyn. I'm a Front-end developer, currently work and live in Poland with my family. More professional info you can find on my [LinkedIn page]({{ site.linkedin }}). I try to keep it up to date.
+You can contact me via my [email](mailto:{{ site.email }}).
 
-Jekyll also offers powerful support for code snippets:
+### Blog engine
+For my previous attempts to create a blog I used [Wordpress](https://wordpress.com/). It's powerful, it has a lot of beautiful themes and cool plugins.
+But it's written with [PHP](php.net) which I'm not good enough in to look through source code and understand everything. 
+Also every time I ended up with setting up all the configurations (domain, hosting, Wordpress) up to two days and after that I simply don't want to 
+write posts any more.
 
-{% highlight js linenos %}
-// comment
-import React from 'react';
-{% endhighlight %}
+But do I need all the power and beauty? No. As I wrote, it's just a place to share some texts/code. 
+So I realized that need something that is already done and configured, like [Medium](https://medium.com). And actually it almost suited me, 
+except code syntax highlighting, I don't like it in Medium. 
 
-
-{% highlight php %}
-<?php
-
-echo 'Hello world!';
-
-{% endhighlight %}
-
-```ruby
-sdfsf
-```
-
-
-
-
-
-<pre class=' line-numbers'><code class="language-javascript">// comment
-import React from 'react';
- 
-</code></pre>
-
-
-<pre  data-line='1-3'><code class="language-javascript">
-// comment
-import React from 'react';
- 
-</code></pre>
-
-
-
-```javascript
-// comment
-import React from 'react';
-```
-
-```bash
-cd ~
-```
-
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: http://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+So I started looking for something quick and simple, and here's the result. This website is hosted in 
+[GitHub](https://github.com) as a [GitHub Page](https://pages.github.com). As a blog engine I'm using [Jekyll](http://jekyllrb.com/) - 
+it's simple and static, since I don't need any databases to keep text/code, just the [Markdown](https://daringfireball.net/projects/markdown/) text.
+And frankly speaking I'm happy with this combination.
