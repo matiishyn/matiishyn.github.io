@@ -29,4 +29,4 @@ except code syntax highlighting, I don't like it in Medium.
 So I started looking for something quick and simple, and here's the result. This website is hosted in 
 [GitHub](https://github.com) as a [GitHub Page](https://pages.github.com). As a blog engine I'm using [Jekyll](http://jekyllrb.com/) - 
 it's simple and static, since I don't need any databases to keep text/code, just the [Markdown](https://daringfireball.net/projects/markdown/) text.
-And frankly speaking I'm happy with this combination.
+And frankly speaking I'm happy with this combination. 
