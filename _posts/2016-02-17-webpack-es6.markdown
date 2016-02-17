@@ -1,0 +1,127 @@
+---
+layout: post
+title:  "Starting new ES2015 (ES6) project with Webpack"
+date:   2016-02-17 13:03:48 +0100
+categories: programming es6 webpack javascript
+---
+
+In this post I'll try to briefly described (just) [Webpack] configurations (`webpack.config.js`) for such projects 
+that should be written with ES6/ES2015:
+
+* ES6/ES2015 project
+* ES6/ES2015 project with support of experimental ES7 features
+* [React] project
+
+It requires basic knowledge of [Node.js], [npm], [Webpack] and command line. Make sure that you have installed all of them.
+
+### ES6/ES2015
+ES6/ES2015 is a current version of JavaScript not yet supported by all modern browsers. 
+That's why you need to use a compiler to make it work. I will use [Babel] in combination with [Webpack]
+
+### Webpack
+[Webpack] is a module bundler. Make sure you have installed it globally, like this `npm install webpack -g`. 
+Installation is described [here](http://webpack.github.io/docs/installation.html).
+
+This post is aimed to define the correct Webpack configuration (`webpack.config.js`) but not to teach it.
+
+## ES6/ES2015 Webpack configuration
+
+Let's install some NPM packages that we need
+
+<pre><code class="language-bash">
+# webpack itself
+npm i --save-dev webpack
+
+# babel core and loader for webpack
+npm i --save-dev babel-core babel-loader
+
+# es2015 features
+npm i --save-dev babel-preset-es2015
+</code></pre>
+
+And your `webpack.config.js` should look like this:
+
+<pre class='line-numbers' data-line='15-20'><code class="language-javascript">
+module.exports = {
+    // simple config from http://webpack.github.io/docs/configuration.html
+    context: __dirname + "/app",
+    entry: "./entry",
+    output: {
+        path: __dirname + "/dist",
+        filename: "bundle.js"
+    },
+
+    // using webpack loader
+    module: {
+        loaders: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: "babel-loader", // or just "babel"
+                query: {
+                    presets: ['es2015']
+                }
+            }
+        ]
+    }
+};
+</code></pre>
+
+And that's it. You can write your ES6/ES2015 code in `entry.js` file and it will be compiled to ES5 code 
+and budled to `bundle.js` which should be included in your HTML file. Read more about Webpack [here](http://webpack.github.io/docs/).
+
+
+## ES7 Webpack configuration
+To turn on ES7 support you just need to add [Babel's "Stage 0" preset](https://babeljs.io/docs/plugins/preset-stage-0/).
+Let's see how to do that.
+
+First of all you need to install it
+
+<pre><code class="language-bash">
+# make sure that dependencies from previous project are installed
+npm i --save-dev webpack babel-core babel-loader babel-preset-es2015
+
+# then you may install the Stage 0 preset
+npm i --save-dev babel-preset-stage-0
+</code></pre>
+
+And add the preset to babel-loader, like this:
+
+`webpack.config.js`
+
+<pre class='line-numbers' data-line='19'><code class="language-javascript">
+module.exports = {
+    // simple config from http://webpack.github.io/docs/configuration.html
+    context: __dirname + "/app",
+    entry: "./entry",
+    output: {
+        path: __dirname + "/dist",
+        filename: "bundle.js"
+    },
+
+    // using webpack loader
+    module: {
+        loaders: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: "babel-loader", // or just "babel"
+                query: {
+                    presets: ['es2015', 'stage-0']
+                }
+            }
+        ]
+    }
+};
+</code></pre>
+
+Enjoy ES7 and remember that a lot of things are still experimental. Personally I needed this preset to make 
+[ES7 Decorators](https://medium.com/google-developers/exploring-es7-decorators-76ecb65fb841) work.
+
+
+
+[Webpack]: https://webpack.github.io
+[Node.js]: https://nodejs.org
+[npm]: https://npmjs.com
+[Babel]: https://babeljs.io
+[React]: https://facebook.github.io/react

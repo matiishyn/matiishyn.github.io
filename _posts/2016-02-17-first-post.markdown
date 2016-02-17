@@ -13,7 +13,7 @@ First of all I was looking for a place to save and share some information. And I
 Originally this blog was created to share my professional knowledge but it may be the place to share my posts-from-life as well.
 
 ### Who am I?
-My name is Ivan Matiishyn. I'm a Front-end developer, currently work and live in Poland with my family. More professional info you can find on my [LinkedIn page]({{ site.linkedin }}). I try to keep it up to date.
+My name is Ivan Matiishyn. I'm a Front-end developer, currently work and live in Poland with my family. More professional info you can find on my [LinkedIn page]({{ site.linkedin }}){:target="_blank"}. I try to keep it up to date.
 You can contact me via my [email](mailto:{{ site.email }}).
 
 ### Blog engine
