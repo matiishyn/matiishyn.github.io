@@ -10,7 +10,7 @@ Yet another attempt of mine to create my own blog. Why? It's cool, isn't it? Eve
 Well, maybe, but not for my case.
 
 First of all I was looking for a place to save and share some information. And I hope it's the right place to do it. What kind of info?
-Originally this blog is created to share my professional knowledge but it may be the place to share my posts-from-life as well.
+Originally this blog was created to share my professional knowledge but it may be the place to share my posts-from-life as well.
 
 ### Who am I?
 My name is Ivan Matiishyn. I'm a Front-end developer, currently work and live in Poland with my family. More professional info you can find on my [LinkedIn page]({{ site.linkedin }}). I try to keep it up to date.
