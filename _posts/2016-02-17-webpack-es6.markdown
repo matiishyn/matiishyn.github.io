@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Starting new ES2015 (ES6) project with Webpack"
+title:  "Webpack configurations for ES2015/ES6, ES7, React JSX"
 date:   2016-02-17 13:03:48 +0100
 categories: programming es6 webpack javascript
 ---
 
-In this post I'll try to briefly described (just) [Webpack] configurations (`webpack.config.js`) for such projects 
+In this post I'll try to briefly describe [Webpack] configurations (`webpack.config.js`) for such projects 
 that should be written with ES6/ES2015:
 
 * ES6/ES2015 project
@@ -13,6 +13,8 @@ that should be written with ES6/ES2015:
 * [React] project
 
 It requires basic knowledge of [Node.js], [npm], [Webpack] and command line. Make sure that you have installed all of them.
+I'll try to define the correct Webpack configuration (`webpack.config.js`) but will not explain how to work with Webpack.
+
 
 ### ES6/ES2015
 ES6/ES2015 is a current version of JavaScript not yet supported by all modern browsers. 
@@ -22,7 +24,6 @@ That's why you need to use a compiler to make it work. I will use [Babel] in com
 [Webpack] is a module bundler. Make sure you have installed it globally, like this `npm install webpack -g`. 
 Installation is described [here](http://webpack.github.io/docs/installation.html).
 
-This post is aimed to define the correct Webpack configuration (`webpack.config.js`) but not to teach it.
 
 ## ES6/ES2015 Webpack configuration
 
