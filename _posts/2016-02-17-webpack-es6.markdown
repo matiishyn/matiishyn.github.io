@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Webpack configurations for ES2015/ES6, ES7, React JSX"
+title:  "Webpack configurations for ES2015/ES6, ES7, React JSX1"
 date:   2016-02-17 13:03:48 +0100
 categories: programming es6 webpack javascript
 ---
