@@ -41,15 +41,11 @@ npm i --save-dev babel-preset-es2015
 
 And your `webpack.config.js` should look like this:
 
-<pre class='line-numbers' data-line='15-20'><code class="language-javascript">
+<pre class='line-numbers' data-line='10-17'><code class="language-javascript">
 module.exports = {
     // simple config from http://webpack.github.io/docs/configuration.html
-    context: __dirname + "/app",
     entry: "./entry",
-    output: {
-        path: __dirname + "/dist",
-        filename: "bundle.js"
-    },
+    output: { path: __dirname + "/dist", filename: "bundle.js" },
 
     // using webpack loader
     module: {
@@ -81,7 +77,7 @@ First of all you need to install it
 # make sure that dependencies from previous project are installed
 npm i --save-dev webpack babel-core babel-loader babel-preset-es2015
 
-# then you may install the Stage 0 preset
+# then install the Stage 0 preset
 npm i --save-dev babel-preset-stage-0
 </code></pre>
 
@@ -89,15 +85,11 @@ And add the preset to babel-loader, like this:
 
 `webpack.config.js`
 
-<pre class='line-numbers' data-line='19'><code class="language-javascript">
+<pre class='line-numbers' data-line='15'><code class="language-javascript">
 module.exports = {
     // simple config from http://webpack.github.io/docs/configuration.html
-    context: __dirname + "/app",
     entry: "./entry",
-    output: {
-        path: __dirname + "/dist",
-        filename: "bundle.js"
-    },
+    output: { path: __dirname + "/dist", filename: "bundle.js" },
 
     // using webpack loader
     module: {
@@ -117,6 +109,49 @@ module.exports = {
 
 Enjoy ES7 and remember that a lot of things are still experimental. Personally I needed this preset to make 
 [ES7 Decorators](https://medium.com/google-developers/exploring-es7-decorators-76ecb65fb841) work.
+
+
+## React Webpack configuration
+
+Finally let's review the config for [React] application.
+You'll need to install one more Babel's preset called [React preset](https://babeljs.io/docs/plugins/preset-react/) 
+which will let you use React's JSX syntax
+
+<pre><code class="language-bash">
+# make sure that dependencies from previous project are installed
+npm i --save-dev webpack babel-core babel-loader babel-preset-es2015
+
+# then you may install the React preset
+npm i --save-dev babel-preset-react
+</code></pre>
+
+And add the preset to babel-loader, like this:
+
+`webpack.config.js`
+
+<pre class='line-numbers' data-line='15'><code class="language-javascript">
+module.exports = {
+    // simple config from http://webpack.github.io/docs/configuration.html
+    entry: "./entry",
+    output: { path: __dirname + "/dist", filename: "bundle.js" },
+
+    // using webpack loader
+    module: {
+        loaders: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: "babel-loader", // or just "babel"
+                query: {
+                    presets: ['es2015', 'react']
+                }
+            }
+        ]
+    }
+};
+</code></pre>
+
+Now you may start a new React project with all the ES6 features 
 
 
 
