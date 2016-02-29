@@ -108,7 +108,7 @@ And a small helper `index.js` which is used just for convenience while importing
 export default from './MyComponent' // container components
 </code></pre>
 
-Now you may import the MyComponent wherever you need it
+Now you may import the `MyComponent` wherever you need it
 <pre class='line-numbers'><code class="language-javascript">
 import MyComponent from './components/MyComponent' // will import index.js
 </code></pre>
