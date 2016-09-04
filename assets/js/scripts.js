@@ -104,7 +104,7 @@ $(document).ready(function(){
      ----------------------------------------------------------------------
      Progress Bars
      ----------------------------------------------------------------------
-     */
+
     $('.progress-bar').on('inview', function (event, isInView) {
         if (isInView) {
             $(this).css('width',  function() {
@@ -146,12 +146,13 @@ $(document).ready(function(){
             });
         }
     });
+     */
 
     /*
      ----------------------------------------------------------------------
      Sliders
      ----------------------------------------------------------------------
-     */
+
     $("#education-slider").owlCarousel({
 
         navigation : true, // Show next and prev buttons
@@ -172,12 +173,12 @@ $(document).ready(function(){
         singleItem:true
 
     });
-
+     */
     /*
      ----------------------------------------------------------------------
      Animated Counter
      ----------------------------------------------------------------------
-     */
+
     $('.count').each(function () {
         $(".total-numbers .sum").appear(function() {
             var counter = $(this).html();
@@ -189,6 +190,7 @@ $(document).ready(function(){
             });
         });
     });
+     */
 
     /*
      ----------------------------------------------------------------------
